@@ -32,7 +32,12 @@ const StartupForm = () => {
         if(result.status === 'SUCCESS'){
                toast.success('Your Startup Pitch Has Been Created Successfully!', {
                 duration: 4000,
-                position: 'top-center'
+                position: 'top-center',
+                style: {
+                  backgroundColor:'black',
+                  color: 'white'
+                },
+
             })
             router.push(`/startup/${result._id}`)
         }
@@ -46,7 +51,11 @@ const StartupForm = () => {
             console.log(error)
             toast.error('this is an error!', {
                 duration: 3000,
-                position: 'top-center'
+                position: 'top-center',
+                style: {
+                  backgroundColor:'black',
+                  color: 'white'
+                },
             })
           
             return {...prevState,  error: 'VALIDATION FAILED', status : 'ERROR'}    
@@ -134,7 +143,7 @@ const StartupForm = () => {
             name="link"
             className=" border-[3px] border-black px-5 py-7 text-[18px] text-black font-semibold rounded-full mt-3 placeholder:text-black-300"
             required
-            placeholder="Startup Image URL"
+            placeholder="URL Starting With https://Image Is Valid"
           />
           {errors.link && (
             <p className="text-red-500 mt-2 ml-5">{errors.link}</p>

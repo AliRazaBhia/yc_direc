@@ -15,7 +15,7 @@ export const formSchema = z.object({
       }
     },
     {
-      message: "Link must point to a valid image URL",
+      message: " Link must point to a valid image URL",
     }
   ),
   pitch: z.string().min(10),

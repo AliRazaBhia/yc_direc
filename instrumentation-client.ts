@@ -1,8 +1,9 @@
 // This file configures the initialization of Sentry on the client.
 // The added config here will be used whenever a users loads a page in their browser.
-// https://docs.sentry.io/platforms/javascript/guides/nextjs/
+// https://docs.sentry.io/platforms/javascript/guides/  nextjs/
 
 import * as Sentry from "@sentry/nextjs";
+
 
 Sentry.init({
   dsn: "https://7869b0de88c30b9b3c691abcc0ba66b9@o4509513444294666.ingest.de.sentry.io/4509513447768144",
@@ -10,12 +11,6 @@ Sentry.init({
   // Add optional integrations for additional features
   integrations: [
     Sentry.replayIntegration(),
-
-
-    Sentry.feedbackIntegration({
-      // Additional SDK configuration goes in here, for example:
-      colorScheme: "system",
-    }),
   ],
   
 
